@@ -3,741 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Complete Duke Energy bill pay guide covering online payments, AutoPay, phone payments, payment assistance, troubleshooting, and scam prevention." />
+  <meta name="description" content="Independent Duke Energy bill pay guide covering online payments, AutoPay, phone payments, payment assistance, troubleshooting, scam prevention, and official resources." />
   <meta name="keywords" content="Duke Energy bill pay, pay Duke Energy bill, Duke Energy online payment, Duke Energy AutoPay, Duke Energy payment assistance" />
+  <link rel="canonical" href="https://getlivesupport.github.io/dukeenerguide/" />
   <title>Duke Energy Bill Pay: Complete Payment Guide</title>
-
   <style>
-    :root {
-      --blue: #0066b3;
-      --dark-blue: #004b87;
-      --light-blue: #eaf5ff;
-      --green: #16834b;
-      --orange: #f29f05;
-      --dark: #1e293b;
-      --gray: #64748b;
-      --light: #f8fafc;
-      --border: #dbe3ec;
-      --white: #ffffff;
-      --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--light);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--dark-blue), var(--blue));
-      color: var(--white);
-      padding: 72px 0 64px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 0.85rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero-text {
-      max-width: 760px;
-      font-size: 1.15rem;
-      opacity: 0.96;
-      margin-bottom: 28px;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .button:hover {
-      text-decoration: none;
-      transform: translateY(-2px);
-      opacity: 0.92;
-    }
-
-    .button-primary {
-      background: var(--white);
-      color: var(--dark-blue);
-    }
-
-    .button-secondary {
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.65);
-    }
-
-    .notice {
-      margin: 28px auto 0;
-      background: #fff8e6;
-      border-left: 5px solid var(--orange);
-      color: #5c4300;
-      padding: 16px 18px;
-      border-radius: 8px;
-    }
-
-    main {
-      padding: 48px 0 70px;
-    }
-
-    .toc {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      margin-bottom: 42px;
-    }
-
-    .toc h2 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .toc ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 8px 24px;
-      list-style: none;
-    }
-
-    .toc a {
-      font-weight: 600;
-    }
-
-    section {
-      margin-bottom: 52px;
-    }
-
-    h2 {
-      color: var(--dark-blue);
-      font-size: clamp(1.7rem, 3vw, 2.35rem);
-      margin-bottom: 14px;
-    }
-
-    h3 {
-      color: var(--dark);
-      font-size: 1.25rem;
-      margin-bottom: 8px;
-    }
-
-    .section-intro {
-      max-width: 800px;
-      color: var(--gray);
-      margin-bottom: 24px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .card .number {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--light-blue);
-      color: var(--blue);
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .card p {
-      color: var(--gray);
-    }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 16px;
-    }
-
-    .step {
-      counter-increment: step;
-      position: relative;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 22px 22px 72px;
-      box-shadow: var(--shadow);
-    }
-
-    .step::before {
-      content: counter(step);
-      position: absolute;
-      left: 20px;
-      top: 22px;
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--blue);
-      color: var(--white);
-      font-weight: 700;
-    }
-
-    .step p {
-      color: var(--gray);
-    }
-
-    .checklist {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .checklist li {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 14px 16px 14px 46px;
-      position: relative;
-    }
-
-    .checklist li::before {
-      content: "✓";
-      position: absolute;
-      left: 16px;
-      color: var(--green);
-      font-weight: 700;
-      font-size: 1.15rem;
-    }
-
-    .highlight {
-      background: var(--light-blue);
-      border: 1px solid #b9ddf9;
-      border-radius: 12px;
-      padding: 24px;
-      margin-top: 20px;
-    }
-
-    .warning {
-      background: #fff4f1;
-      border: 1px solid #ffc9bd;
-      border-left: 5px solid #d9482b;
-      border-radius: 10px;
-      padding: 22px;
-    }
-
-    .warning h3 {
-      color: #a52d19;
-    }
-
-    .faq {
-      display: grid;
-      gap: 14px;
-    }
-
-    details {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 17px 19px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--dark-blue);
-    }
-
-    details p {
-      color: var(--gray);
-      margin-top: 12px;
-    }
-
-    .source-box {
-      background: #eef7f1;
-      border: 1px solid #b9dfc7;
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 30px 0;
-      font-size: 0.92rem;
-    }
-
-    footer a {
-      color: #9ed4ff;
-    }
-
-    .small {
-      font-size: 0.88rem;
-      color: var(--gray);
-    }
-
-    @media (max-width: 640px) {
-      header {
-        padding: 52px 0 44px;
-      }
-
-      .button {
-        width: 100%;
-        text-align: center;
-      }
-
-      .step {
-        padding-left: 62px;
-      }
-    }
+    :root{--blue:#0066b3;--dark-blue:#004b87;--light-blue:#eaf5ff;--green:#16834b;--orange:#f29f05;--dark:#1e293b;--gray:#64748b;--light:#f8fafc;--border:#dbe3ec;--white:#fff;--shadow:0 8px 24px rgba(15,23,42,.08)}
+    *{box-sizing:border-box;margin:0;padding:0} body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--light);line-height:1.6}
+    a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}.container{width:min(1120px,92%);margin:auto}
+    header{background:linear-gradient(135deg,var(--dark-blue),var(--blue));color:var(--white);padding:72px 0 64px}.eyebrow{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 14px;font-size:.85rem;margin-bottom:18px}h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;margin-bottom:20px}.hero-text{max-width:760px;font-size:1.15rem;opacity:.96;margin-bottom:28px}.button-row{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-block;padding:13px 20px;border-radius:8px;font-weight:700;transition:transform .2s ease,opacity .2s ease}.button:hover{text-decoration:none;transform:translateY(-2px);opacity:.92}.button-primary{background:var(--white);color:var(--dark-blue)}.button-secondary{color:var(--white);border:1px solid rgba(255,255,255,.65)}
+    .notice{margin:28px auto 0;background:#fff8e6;border-left:5px solid var(--orange);color:#5c4300;padding:16px 18px;border-radius:8px}main{padding:48px 0 70px}.toc,.card,.step,details{background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow)}.toc{padding:24px;margin-bottom:42px}.toc h2{font-size:1.2rem;margin-bottom:12px}.toc ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 24px;list-style:none}.toc a{font-weight:600}section{margin-bottom:52px}h2{color:var(--dark-blue);font-size:clamp(1.7rem,3vw,2.35rem);margin-bottom:14px}h3{color:var(--dark);font-size:1.25rem;margin-bottom:8px}.section-intro{max-width:800px;color:var(--gray);margin-bottom:24px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.card{padding:24px}.card .number{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--light-blue);color:var(--blue);font-weight:700;margin-bottom:14px}.card p,.step p,details p{color:var(--gray)}.steps{counter-reset:step;display:grid;gap:16px}.step{counter-increment:step;position:relative;padding:22px 22px 22px 72px}.step::before{content:counter(step);position:absolute;left:20px;top:22px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--blue);color:var(--white);font-weight:700}.checklist{list-style:none;display:grid;gap:12px}.checklist li{background:var(--white);border:1px solid var(--border);border-radius:9px;padding:14px 16px 14px 46px;position:relative}.checklist li::before{content:"✓";position:absolute;left:16px;color:var(--green);font-weight:700;font-size:1.15rem}.highlight{background:var(--light-blue);border:1px solid #b9ddf9;border-radius:12px;padding:24px;margin-top:20px}.warning{background:#fff4f1;border:1px solid #ffc9bd;border-left:5px solid #d9482b;border-radius:10px;padding:22px}.warning h3{color:#a52d19}.faq{display:grid;gap:14px}details{padding:17px 19px;box-shadow:none}summary{cursor:pointer;font-weight:700;color:var(--dark-blue)}details p{margin-top:12px}.source-box{background:#eef7f1;border:1px solid #b9dfc7;border-radius:12px;padding:24px}.contact-box{background:#fff;border:2px solid #b9ddf9;border-radius:12px;padding:24px}.contact-box h2{margin-bottom:8px}.small{font-size:.88rem;color:var(--gray)}footer{background:#0f172a;color:#cbd5e1;padding:30px 0;font-size:.92rem}footer a{color:#9ed4ff}@media(max-width:640px){header{padding:52px 0 44px}.button{width:100%;text-align:center}.step{padding-left:62px}}
   </style>
 </head>
-
 <body>
   <header>
     <div class="container">
       <span class="eyebrow">Updated September 16, 2026</span>
-
       <h1>Duke Energy Bill Pay: Complete Guide</h1>
-
-      <p class="hero-text">
-        Learn how to pay your Duke Energy bill online, enroll in AutoPay,
-        make a phone payment, find payment assistance, and protect yourself
-        from payment scams.
-      </p>
-
+      <p class="hero-text">Learn how to pay your Duke Energy bill online, enroll in AutoPay, make a phone payment, find payment assistance, and protect yourself from payment scams.</p>
       <div class="button-row">
-        <a
-          class="button button-primary"
-          href="https://www.duke-energy.com/home/billing"
-          target="_blank"
-          rel="noopener"
-        >
-          Pay or Manage Your Bill
-        </a>
-
-        <a
-          class="button button-secondary"
-          href="https://www.duke-energy.com/home/my-account"
-          target="_blank"
-          rel="noopener"
-        >
-          Open My Account
-        </a>
+        <a class="button button-primary" href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener noreferrer">Pay or Manage Your Bill</a>
+        <a class="button button-secondary" href="https://www.duke-energy.com/home/my-account" target="_blank" rel="noopener noreferrer">Open My Account</a>
       </div>
-
-      <div class="notice">
-        <strong>Important:</strong>
-        Duke Energy payment options and customer-service details may vary by
-        state and service territory. Always confirm the information shown on
-        your current bill or the official Duke Energy website.
-      </div>
+      <div class="notice"><strong>Important:</strong> This is an independent informational guide and is not affiliated with or endorsed by Duke Energy. Payment options and customer-service details may vary by state and service territory. Confirm current information on your bill or through the official Duke Energy website. This website does not collect payments or account credentials.</div>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <nav class="toc" aria-label="Table of contents">
-        <h2>In This Guide</h2>
-        <ul>
-          <li><a href="#online">Pay Online</a></li>
-          <li><a href="#autopay">Set Up AutoPay</a></li>
-          <li><a href="#other-options">Other Payment Options</a></li>
-          <li><a href="#assistance">Payment Assistance</a></li>
-          <li><a href="#troubleshooting">Troubleshooting</a></li>
-          <li><a href="#scams">Avoid Payment Scams</a></li>
-          <li><a href="#faq">Frequently Asked Questions</a></li>
-        </ul>
-      </nav>
+      <nav class="toc" aria-label="Table of contents"><h2>In This Guide</h2><ul>
+        <li><a href="#online">Pay Online</a></li><li><a href="#autopay">Set Up AutoPay</a></li><li><a href="#other-options">Other Payment Options</a></li><li><a href="#assistance">Payment Assistance</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#scams">Avoid Payment Scams</a></li><li><a href="#faq">Frequently Asked Questions</a></li><li><a href="#about">About This Guide</a></li>
+      </ul></nav>
 
-      <section id="online">
-        <h2>How to Pay Your Duke Energy Bill Online</h2>
-        <p class="section-intro">
-          Online payment is usually the fastest way to review your account,
-          see your balance, and submit a payment. You can use a computer,
-          tablet, or mobile device.
-        </p>
-
+      <section id="online"><h2>How to Pay Your Duke Energy Bill Online</h2><p class="section-intro">Online payment is usually the fastest way to review your account, see your balance, and submit a payment. You can use a computer, tablet, or mobile device.</p>
         <div class="steps">
-          <article class="step">
-            <h3>Visit the official Duke Energy website</h3>
-            <p>
-              Go directly to
-              <a href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener">
-                Duke Energy Billing and Payment Options
-              </a>
-              or use the My Account page.
-            </p>
-          </article>
-
-          <article class="step">
-            <h3>Sign in to My Account</h3>
-            <p>
-              Enter your username and password. If you do not have an online
-              profile, select the registration option and follow the prompts.
-            </p>
-          </article>
-
-          <article class="step">
-            <h3>Review your bill</h3>
-            <p>
-              Confirm the account number, billing amount, due date, and any
-              past-due balance before submitting payment.
-            </p>
-          </article>
-
-          <article class="step">
-            <h3>Choose a payment method</h3>
-            <p>
-              Select the payment method available for your location, such as
-              a bank account or another option displayed in your account.
-            </p>
-          </article>
-
-          <article class="step">
-            <h3>Submit and save confirmation</h3>
-            <p>
-              Submit the payment and save the confirmation number or email.
-              Check your account later to verify that the payment posted.
-            </p>
-          </article>
+          <article class="step"><h3>Visit the official Duke Energy website</h3><p>Go directly to <a href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener noreferrer">Duke Energy Billing and Payment Options</a> or use the official My Account page. You can also start from the official website rather than an unsolicited message.</p></article>
+          <article class="step"><h3>Sign in to My Account</h3><p>Enter your username and password only on the official Duke Energy website. If you do not have an online profile, select the registration option and follow the prompts.</p></article>
+          <article class="step"><h3>Review your bill</h3><p>Confirm the account number, billing amount, due date, and any past-due balance before submitting payment.</p></article>
+          <article class="step"><h3>Choose a payment method</h3><p>Select the payment method available for your location, such as a bank account or another option displayed in your account. Availability and fees may vary.</p></article>
+          <article class="step"><h3>Submit and save confirmation</h3><p>Submit the payment and save the confirmation number or email. Check your account later to verify that the payment posted.</p></article>
         </div>
-
-        <div class="highlight">
-          <strong>Tip:</strong>
-          Duke Energy’s My Account tools can also provide billing history,
-          usage information, payment confirmations, account notifications,
-          and payment-plan features when available for your location.
-        </div>
+        <div class="highlight"><strong>Tip:</strong> Duke Energy’s My Account tools can also provide billing history, usage information, payment confirmations, account notifications, and payment-plan features when available for your location.</div>
       </section>
 
-      <section id="autopay">
-        <h2>How to Set Up Duke Energy AutoPay</h2>
-        <p class="section-intro">
-          AutoPay can help prevent missed due dates by automatically scheduling
-          recurring payments from an eligible payment method.
-        </p>
+      <section id="autopay"><h2>How to Set Up Duke Energy AutoPay</h2><p class="section-intro">AutoPay can help prevent missed due dates by automatically scheduling recurring payments from an eligible payment method.</p><ul class="checklist">
+        <li>Sign in to your official Duke Energy My Account.</li><li>Open the billing, payment, or AutoPay section.</li><li>Choose the payment method you want to use.</li><li>Review the scheduled payment date and terms.</li><li>Confirm enrollment and save the confirmation message.</li><li>Keep enough funds available before each scheduled payment.</li>
+      </ul><p class="small" style="margin-top:16px">AutoPay availability, payment timing, and eligible payment methods can vary depending on your Duke Energy service territory. Review the terms before enrolling and check your account after making changes.</p></section>
 
-        <ul class="checklist">
-          <li>Sign in to your official Duke Energy My Account.</li>
-          <li>Open the billing, payment, or AutoPay section.</li>
-          <li>Choose the payment method you want to use.</li>
-          <li>Review the scheduled payment date and terms.</li>
-          <li>Confirm enrollment and save the confirmation message.</li>
-          <li>Keep enough funds available before each scheduled payment.</li>
-        </ul>
+      <section id="other-options"><h2>Other Ways to Pay Your Duke Energy Bill</h2><p class="section-intro">If you do not want to pay online, Duke Energy may provide additional payment methods. Use the instructions on your bill or confirm the available options for your state.</p><div class="cards">
+        <article class="card"><div class="number">1</div><h3>Pay by phone</h3><p>Call the customer-service or payment number printed on your latest bill. Follow the automated instructions and keep your confirmation number. Do not rely on a number supplied by an unexpected caller.</p></article>
+        <article class="card"><div class="number">2</div><h3>Pay by mail</h3><p>Send a check or money order using the payment address printed on your bill. Include the payment stub when requested and allow enough time for delivery.</p></article>
+        <article class="card"><div class="number">3</div><h3>Pay in person</h3><p>Use an authorized payment location listed by Duke Energy. Verify the location and accepted payment methods before visiting.</p></article>
+        <article class="card"><div class="number">4</div><h3>Use your bank</h3><p>You may be able to schedule an online bill payment through your bank. Use the correct Duke Energy account number and allow time for bank processing.</p></article>
+      </div></section>
 
-        <p class="small" style="margin-top: 16px;">
-          AutoPay availability, payment timing, and eligible payment methods
-          can vary depending on your Duke Energy service territory.
-        </p>
-      </section>
+      <section id="assistance"><h2>Duke Energy Bill Payment Assistance</h2><p class="section-intro">If you are having difficulty paying your bill, contact Duke Energy as early as possible. Assistance programs and eligibility rules depend on your state, income, account status, and service territory.</p><div class="cards">
+        <article class="card"><h3>Payment arrangements</h3><p>Sign in to My Account or contact Duke Energy to check whether an installment plan, due-date extension, or other arrangement is available.</p></article>
+        <article class="card"><h3>Payment Assistance Finder</h3><p>Some customers can use Duke Energy’s assistance resources to search for local organizations and programs by ZIP code. Confirm eligibility directly with the provider.</p></article>
+        <article class="card"><h3>Budget or equal payment plans</h3><p>Eligible customers may have access to plans that spread expected energy costs across more consistent monthly payments.</p></article>
+      </div><div class="highlight"><strong>Act early:</strong> Do not wait until the due date or a disconnection notice if you already know you may have trouble paying. Contact Duke Energy using the number on your bill or the official website.</div></section>
 
-      <section id="other-options">
-        <h2>Other Ways to Pay Your Duke Energy Bill</h2>
-        <p class="section-intro">
-          If you do not want to pay online, Duke Energy may provide several
-          additional payment methods. Use the instructions on your bill or
-          confirm the available options for your state.
-        </p>
+      <section id="troubleshooting"><h2>Duke Energy Bill Pay Troubleshooting</h2><div class="cards">
+        <article class="card"><h3>Payment failed</h3><p>Check that your payment details are correct, your account has sufficient funds, and your bank has not blocked the transaction. Do not submit repeated payments without checking your account.</p></article>
+        <article class="card"><h3>Payment is pending</h3><p>Review the confirmation email or number and allow processing time. Contact Duke Energy if the payment does not appear after the expected processing period.</p></article>
+        <article class="card"><h3>Cannot sign in</h3><p>Use the official password-reset option. Avoid entering your login information on links received in unexpected texts or emails.</p></article>
+        <article class="card"><h3>Wrong payment amount</h3><p>Compare the payment amount with your current bill and account balance. Contact Duke Energy if a duplicate or incorrect payment was submitted.</p></article>
+      </div></section>
 
-        <div class="cards">
-          <article class="card">
-            <div class="number">1</div>
-            <h3>Pay by phone</h3>
-            <p>
-              Call the customer-service or payment number printed on your
-              latest bill. Follow the automated instructions and keep your
-              confirmation number.
-            </p>
-          </article>
+      <section id="scams"><h2>How to Avoid Duke Energy Payment Scams</h2><div class="warning"><h3>Watch for urgent payment demands</h3><p>Be cautious if someone demands immediate payment, threatens disconnection, asks for gift cards or cryptocurrency, or tells you to use an unusual payment method. Do not use a phone number or payment link supplied by a suspicious caller or message.</p><p style="margin-top:12px">Verify your account by visiting the official Duke Energy website directly or calling the number printed on your bill.</p></div><ul class="checklist" style="margin-top:20px"><li>Do not share your password, verification code, or full banking details.</li><li>Do not purchase gift cards to pay an energy bill.</li><li>Do not click suspicious payment links in texts or emails.</li><li>Use the official Duke Energy website rather than a search-ad link when possible.</li><li>Keep payment confirmations and report suspicious activity promptly.</li></ul></section>
 
-          <article class="card">
-            <div class="number">2</div>
-            <h3>Pay by mail</h3>
-            <p>
-              Send a check or money order using the payment address printed on
-              your bill. Include the payment stub when requested and allow
-              enough time for delivery.
-            </p>
-          </article>
+      <section id="faq"><h2>Frequently Asked Questions</h2><div class="faq">
+        <details><summary>Where can I pay my Duke Energy bill online?</summary><p>Use the official <a href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener noreferrer">Duke Energy Billing and Payment Options</a> page or sign in through the official My Account page.</p></details>
+        <details><summary>Can I pay my Duke Energy bill without signing in?</summary><p>Payment options may vary by state and account type. Visit the official billing page to see which options are currently available for your service territory.</p></details>
+        <details><summary>How do I know whether my payment went through?</summary><p>Save the confirmation number or email after submitting payment. You can also sign in to My Account to review your payment activity.</p></details>
+        <details><summary>What should I do if I cannot afford my bill?</summary><p>Contact Duke Energy as soon as possible and ask about payment arrangements, assistance programs, or other options available in your area.</p></details>
+        <details><summary>Can I change or cancel AutoPay?</summary><p>Sign in to My Account and open the payment or AutoPay settings. Review the account instructions carefully before changing a scheduled payment.</p></details>
+      </div></section>
 
-          <article class="card">
-            <div class="number">3</div>
-            <h3>Pay in person</h3>
-            <p>
-              Use an authorized payment location listed by Duke Energy. Verify
-              the location and accepted payment methods before visiting.
-            </p>
-          </article>
+      <section><h2>Official Duke Energy Resources</h2><div class="source-box"><ul class="checklist">
+        <li><a href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener noreferrer">Duke Energy Billing and Payment Options</a></li>
+        <li><a href="https://www.duke-energy.com/home/my-account" target="_blank" rel="noopener noreferrer">Duke Energy My Account</a></li>
+        <li><a href="https://www.duke-energy.com/" target="_blank" rel="noopener noreferrer">Official Duke Energy Website</a></li>
+      </ul></div></section>
 
-          <article class="card">
-            <div class="number">4</div>
-            <h3>Use your bank</h3>
-            <p>
-              You may be able to schedule an online bill payment through your
-              bank. Use the correct Duke Energy account number and allow time
-              for bank processing.
-            </p>
-          </article>
-        </div>
-      </section>
+      <section class="contact-box"><h2>General website support</h2><p>This site is an independent guide and cannot access Duke Energy accounts, accept payments, reset passwords, or make service decisions. For help navigating this guide, contact Live Support at <a href="tel:+18884144406"><strong>1 (888) 414-4406</strong></a>. For billing, payment, outage, or account matters, use Duke Energy’s official contact information.</p></section>
 
-      <section id="assistance">
-        <h2>Duke Energy Bill Payment Assistance</h2>
-        <p class="section-intro">
-          If you are having difficulty paying your bill, contact Duke Energy
-          as early as possible. Assistance programs and eligibility rules
-          depend on your state, income, account status, and service territory.
-        </p>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Payment arrangements</h3>
-            <p>
-              Sign in to My Account or contact Duke Energy to check whether an
-              installment plan, due-date extension, or other arrangement is
-              available.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Payment Assistance Finder</h3>
-            <p>
-              Some customers can use Duke Energy’s assistance resources to
-              search for local organizations and programs by ZIP code.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Budget or equal payment plans</h3>
-            <p>
-              Eligible customers may have access to plans that spread expected
-              energy costs across more consistent monthly payments.
-            </p>
-          </article>
-        </div>
-
-        <div class="highlight">
-          <strong>Act early:</strong>
-          Do not wait until the due date or a disconnection notice if you
-          already know you may have trouble paying. Contact Duke Energy using
-          the number on your bill or the official website.
-        </div>
-      </section>
-
-      <section id="troubleshooting">
-        <h2>Duke Energy Bill Pay Troubleshooting</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Payment failed</h3>
-            <p>
-              Check that your payment details are correct, your account has
-              sufficient funds, and your bank has not blocked the transaction.
-              Do not submit repeated payments without checking your account.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Payment is pending</h3>
-            <p>
-              Review the confirmation email or number and allow processing time.
-              Contact Duke Energy if the payment does not appear after the
-              expected processing period.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Cannot sign in</h3>
-            <p>
-              Use the official password-reset option. Avoid entering your
-              login information on links received in unexpected texts or
-              emails.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Wrong payment amount</h3>
-            <p>
-              Compare the payment amount with your current bill and account
-              balance. Contact Duke Energy if a duplicate or incorrect payment
-              was submitted.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="scams">
-        <h2>How to Avoid Duke Energy Payment Scams</h2>
-
-        <div class="warning">
-          <h3>Watch for urgent payment demands</h3>
-          <p>
-            Be cautious if someone demands immediate payment, threatens
-            disconnection, asks for gift cards or cryptocurrency, or tells you
-            to use an unusual payment method. Do not use a phone number or
-            payment link supplied by a suspicious caller or message.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Verify your account by visiting the official Duke Energy website
-            directly or calling the number printed on your bill.
-          </p>
-        </div>
-
-        <ul class="checklist" style="margin-top: 20px;">
-          <li>Do not share your password, verification code, or full banking details.</li>
-          <li>Do not purchase gift cards to pay an energy bill.</li>
-          <li>Do not click suspicious payment links in texts or emails.</li>
-          <li>Use the official Duke Energy website rather than a search-ad link when possible.</li>
-          <li>Keep payment confirmations and report suspicious activity promptly.</li>
-        </ul>
-      </section>
-
-      <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq">
-          <details>
-            <summary>Where can I pay my Duke Energy bill online?</summary>
-            <p>
-              Use the official Duke Energy Billing and Payment Options page or
-              sign in through the official My Account page.
-            </p>
-          </details>
-
-          <details>
-            <summary>Can I pay my Duke Energy bill without signing in?</summary>
-            <p>
-              Payment options may vary by state and account type. Visit the
-              official billing page to see which options are currently
-              available for your service territory.
-            </p>
-          </details>
-
-          <details>
-            <summary>How do I know whether my payment went through?</summary>
-            <p>
-              Save the confirmation number or email after submitting payment.
-              You can also sign in to My Account to review your payment
-              activity.
-            </p>
-          </details>
-
-          <details>
-            <summary>What should I do if I cannot afford my bill?</summary>
-            <p>
-              Contact Duke Energy as soon as possible and ask about payment
-              arrangements, assistance programs, or other options available in
-              your area.
-            </p>
-          </details>
-
-          <details>
-            <summary>Can I change or cancel AutoPay?</summary>
-            <p>
-              Sign in to My Account and open the payment or AutoPay settings.
-              Review the account instructions carefully before changing a
-              scheduled payment.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section>
-        <h2>Official Duke Energy Resources</h2>
-
-        <div class="source-box">
-          <ul class="checklist">
-            <li>
-              <a href="https://www.duke-energy.com/home/billing" target="_blank" rel="noopener">
-                Duke Energy Billing and Payment Options
-              </a>
-            </li>
-            <li>
-              <a href="https://www.duke-energy.com/home/my-account" target="_blank" rel="noopener">
-                Duke Energy My Account
-              </a>
-            </li>
-            <li>
-              <a href="https://www.duke-energy.com/" target="_blank" rel="noopener">
-                Official Duke Energy Website
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Disclaimer</h2>
-        <p class="small">
-          This guide is for general informational purposes only. It is not
-          affiliated with or endorsed by Duke Energy. Payment methods,
-          assistance programs, fees, processing times, and eligibility
-          requirements may change and may differ by state or service territory.
-          Always verify current information through Duke Energy’s official
-          website or the contact information printed on your bill.
-        </p>
-      </section>
+      <section id="about"><h2>About This Guide</h2><p class="small">This guide is published at <a href="https://getlivesupport.github.io/dukeenerguide/">https://getlivesupport.github.io/dukeenerguide/</a> for general informational purposes. Content is written to help readers locate official resources and understand common payment topics. It is not legal, financial, or utility-service advice. We do not request or store Duke Energy usernames, passwords, verification codes, bank details, or utility account numbers.</p></section>
+      <section><h2>Disclaimer</h2><p class="small">This guide is not affiliated with or endorsed by Duke Energy. Payment methods, assistance programs, fees, processing times, and eligibility requirements may change and may differ by state or service territory. Always verify current information through Duke Energy’s official website or the contact information printed on your bill.</p></section>
     </div>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        © 2026 Duke Energy Bill Pay Guide. Informational content only.
-      </p>
-      <p style="margin-top: 8px;">
-        Verify all payment information through the official Duke Energy website.
-      </p>
-    </div>
-  </footer>
+  <footer><div class="container"><p>© 2026 Duke Energy Bill Pay Guide. Independent informational content only.</p><p style="margin-top:8px"><a href="https://getlivesupport.github.io/dukeenerguide/">https://getlivesupport.github.io/dukeenerguide/</a> · General website support: <a href="tel:+18884144406">1 (888) 414-4406</a></p><p style="margin-top:8px">Verify all payment information through the official Duke Energy website.</p></div></footer>
 </body>
 </html>
